@@ -1,120 +1,46 @@
-* {
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
-}
+#score { text-align: center; }
 
-body {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-}
-
-#container {
-    height: 400px;
-    width: 1200px;
+#game {
+    width: 600px;
+    height: 300px;
+    border: 2px solid black;
+    margin: auto;
+    background-image: url("./background.jpg");
+    background-size: cover;
+  }
+  
+  #dino {
+    height: 75px;
+    width: 75px;
+    top: 225px;
     position: relative;
-    overflow: hidden;
-}
+    background-image: url("./dino.png");
+    background-size: cover;
+  }
 
-#container #miku {
-    height: 70px;
-    width: 70px;
-    position: absolute;
-    bottom: 28px;
-    left: 20px;
-}
-
-#container #miku img {
-    height: 70px;
-    width: 70px;
-}
-
-.mikuActive {
-    animation: animatemiku 0.5s linear infinite;
-}
-
-@keyframes animatemiku {
-
-    0%,
-    100% {
-        bottom: 28px;
-    }
-
-    45%,
-    55% {
-        bottom: 160px;
-    }
-}
-
-#container #csomagok {
-    height: 80px;
-    width: 125px;
-    position: absolute;
-    bottom: 20px;
-    right: -20px;
-}
-
-#container #csomagok img {
-    height: 80px;
-    width: 125px;
-}
-
-.csomagokActive {
-    animation: csomagokAnimate 1s linear infinite;
-}
-
-@keyframes csomagokAnimate {
-    0% {
-        right: -125px;
-    }
-
-    100% {
-        right: 100%;
-    }
-}
-
-#container #hater {
-    height: 30px;
-    width: 1200px;
-    position: absolute;
-    bottom: 0;
-}
-
-#container #hater img {
-    height: 30px;
-    width: 2000px;
-    position: absolute;
-    left: 0;
-    animation: none;
-}
-
-@keyframes haterAnimate {
-    0% {
-        left: 0;
-    }
-
-    100% {
-        left: -800px;
-    }
-}
-
-#pontszam {
-    height: auto;
-    width: auto;
-    position: absolute;
-    top: 20px;
-    right: 0;
-}
-
-#jatekvege {
-    display: none;
-    font-size: 70px;
-    position: absolute;
-    left: calc(50% - 181px);
-    top: calc(50% - 40px);
-    width: 362px;
-    height: 80px;
-    color: #5eee0b;
-}
+  #rock {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 175px;
+    left: 550px;
+    background-image: url("./rock.png");
+    background-size: cover;
+    animation: rock 1.33s infinite;
+  }
+  
+  @keyframes rock {
+    0%{left: 550px;}
+    100%{left: -50px;}
+  }
+  
+  .jump-animation {
+    animation: jump 0.5s;
+  }
+  
+  @keyframes jump {
+    0%{top: 225px;}
+    50%{top: 75px;}
+    75%{top: 75px;}
+    100%{top: 225px;}
+  }
