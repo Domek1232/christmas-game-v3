@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+#container {
+    height: 400px;
+    width: 1200px;
+    position: relative;
+    overflow: hidden;
+}
+
+#container #miku {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    bottom: 28px;
+    left: 20px;
+}
+
+#container #miku img {
+    height: 70px;
+    width: 70px;
+}
+
+.mikuActive {
+    animation: animateDino 0.5s linear infinite;
+}
+
+@keyframes animateDino {
+
+    0%,
+    100% {
+        bottom: 28px;
+    }
+
+    45%,
+    55% {
+        bottom: 160px;
+    }
+}
