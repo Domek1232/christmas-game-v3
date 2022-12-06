@@ -32,10 +32,10 @@ body {
 }
 
 .mikuActive {
-    animation: animateDino 0.5s linear infinite;
+    animation: animatemiku 0.5s linear infinite;
 }
 
-@keyframes animateDino {
+@keyframes animatemiku {
 
     0%,
     100% {
@@ -45,5 +45,32 @@ body {
     45%,
     55% {
         bottom: 160px;
+    }
+}
+
+#container #csomagok {
+    height: 80px;
+    width: 125px;
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+}
+
+#container #csomagok img {
+    height: 80px;
+    width: 125px;
+}
+
+.csomagokActive {
+    animation: csomagokAnimate 1s linear infinite;
+}
+
+@keyframes csomagokAnimate {
+    0% {
+        right: -125px;
+    }
+
+    100% {
+        right: 100%;
     }
 }
