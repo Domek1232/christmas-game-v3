@@ -74,3 +74,29 @@ body {
         right: 100%;
     }
 }
+
+#container #hater {
+    height: 30px;
+    width: 1200px;
+    position: absolute;
+    bottom: 0;
+}
+
+#container #hater img {
+    height: 30px;
+    width: 2000px;
+    position: absolute;
+    left: 0;
+    animation: none;
+}
+
+@keyframes haterAnimate {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -800px;
+    }
+}
+
