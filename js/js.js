@@ -1,30 +1,35 @@
-let container = document.querySelector("#container");
-let miku = document.querySelector("#miku");
-let csomagok = document.querySelector("#csomagok");
-let hater = document.querySelector("#hater");
-let pontszam = document.querySelector("#pontszam");
-let jatekvege = document.querySelector("#jatekvege");
+const dino = document.getElementById("dino");
+const rock = document.getElementById("rock");
+const score = document.getElementById("score");
 
-//A változók deklarálása a pontszámhoz
-let interval = null;
-let playerScore = 0;
-
-let scoreCounter = () => {
-    playerScore++;
-    score.innerHTML = `Score <b>${playerScore}</b>`;
+function jump() {
+  dino.classList.add("jump-animation");
+  setTimeout(() =>
+    dino.classList.remove("jump-animation"), 500);
 }
 
+document.addEventListener('keypress', (event) => {
+  if (!dino.classList.contains('jump-animation')) {
+    jump();
+  }
+})
 
-//játék inditása
-window.addEventListener("keydown", (start) => {
+setInterval(() => {
+  const dinoTop = parseInt(window.getComputedStyle(dino)
+    .getPropertyValue('top'));
+  const rockLeft = parseInt(window.getComputedStyle(rock)
+    .getPropertyValue('left'));
+  score.innerText++;
 
-    if (start.code == "Space") {
-        jatekvege.style.display = "none";
-        csomagok.classList.add("csomagokActive");
-        hater.firstElementChild.style.animation = "haterAnimate 1.5s linear infinite";
+  if (rockLeft < 0) {
+    rock.style.display = 'none';
+  } else {
+    rock.style.display = ''
+  }
 
-        //pontszam
-        let playerScore = 0;
-        interval = setInterval(scoreCounter, 200);
-    }
-});
+  if (rockLeft < 50 && rockLeft > 0 && dinoTop > 150) {
+    alert("You got a score of: " + score.innerText +
+      "\n\nPlay again?");
+    location.reload();
+  }
+}, 50);
