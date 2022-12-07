@@ -28,3 +28,12 @@
   background-size: cover;
   animation: rock 1.25s infinite cubic-bezier(1, 1, 0, 0);
 }
+
+@keyframes rock {
+  0%{left: 550px;}
+  100%{left: -50px;}
+}
+
+.jump-animation {
+  animation: jump .85s ease-out;
+}
