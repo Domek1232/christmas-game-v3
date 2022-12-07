@@ -9,4 +9,11 @@
   background-size: cover;
 }
 
-
+#dino {
+  height: 100px;
+  width: 100px;
+  top: 212px;
+  position: relative;
+  background-image: url("./dino.png");
+  background-size: cover;
+}
