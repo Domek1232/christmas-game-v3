@@ -1,45 +1,54 @@
-#score { text-align: center; color: white;}
+#score { text-align: center; }
 
 #game {
-  width: 600px;
-  height: 300px;
-  border: 2px solid black;
-  margin: auto;
-  background-image: url("./background.jpeg");
-  background-size: cover;
-}
+  padding: 20px;
+    width: 750px;
+    height: 350px;
+    border: 2px solid black;
+    margin: auto;
+    background-image: url("../kepek/background.png");
+    background-size: cover;
+    background-position: center;
+    border-image: repeating-linear-gradient(30deg, #ff0000, #ff0000, #00ff00, #00ff00, #ffffff, #ffffff 20px) 20;
+    border-image-outset: 10px;
+    border-image-width: 10px;
+    box-shadow: 0px 15px 25px 25px rgba(255, 255, 255, 0.25);
+    z-index: -999;
+  }
+  
+  #dino {
+    width: 82px;
+    height: 114px;
+    top: 240px;
+    position: relative;
+    background-image: url("../kepek/dino.png");
+    background-size: cover;
+    z-index: 1;
+  }
 
-#dino {
-  height: 100px;
-  width: 100px;
-  top: 212px;
-  position: relative;
-  background-image: url("./dino.png");
-  background-size: cover;
-}
-
-#rock {
-  width: 75px;
-  height: 75px;
-  position: relative;
-  top: 129px;
-  left: 550px;
-  background-image: url("./rock.png");
-  background-size: cover;
-  animation: rock 1.25s infinite cubic-bezier(1, 1, 0, 0);
-}
-
-@keyframes rock {
-  0%{left: 550px;}
-  100%{left: -50px;}
-}
-
-.jump-animation {
-  animation: jump .85s ease-out;
-}
-
-@keyframes jump {
-  0%{top: 212px;}
-  50%{top: 75px;}
-  100%{top: 212px;}
-}
+  #rock {
+    width: 75px;
+    height: 99px;
+    position: relative;
+    top: 140px;
+    left: 710px;
+    background-image: url("../kepek/rock.png");
+    background-size: cover;
+    animation: rock 1.33s infinite linear;
+    z-index: 1;
+  }
+  
+  @keyframes rock {
+    0%{left: 710px;}
+    100%{left: -26px;}
+  }
+  
+  .jump-animation {
+    animation: jump 0.65s cubic-bezier(0.18, 0.60, 0.20, 0.97);
+  }
+  
+  @keyframes jump {
+    0%{top: 240px;}
+    50%{top: 75px;}
+    100%{top: 240px;}
+  }
