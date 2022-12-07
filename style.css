@@ -17,3 +17,14 @@
   background-image: url("./dino.png");
   background-size: cover;
 }
+
+#rock {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  top: 129px;
+  left: 550px;
+  background-image: url("./rock.png");
+  background-size: cover;
+  animation: rock 1.25s infinite cubic-bezier(1, 1, 0, 0);
+}
