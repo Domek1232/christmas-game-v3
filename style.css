@@ -44,7 +44,7 @@
   }
   
   .jump-animation {
-    animation: jump 0.65s cubic-bezier(0.18, 0.60, 0.20, 0.97);
+    animation: jump 0.64s cubic-bezier(0.18, 0.60, 0.20, 0.97);
   }
   
   @keyframes jump {
