@@ -23,7 +23,7 @@
     position: relative;
     background-image: url("../kepek/dino.png");
     background-size: cover;
-    z-index: 1;
+    z-index: 2;
   }
 
   #rock {
@@ -44,7 +44,7 @@
   }
   
   .jump-animation {
-    animation: jump 0.64s cubic-bezier(0.18, 0.60, 0.20, 0.97);
+    animation: jump .65s cubic-bezier(0.18, 0.60, 0.20, 0.97);
   }
   
   @keyframes jump {
