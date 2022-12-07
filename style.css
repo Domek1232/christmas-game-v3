@@ -37,3 +37,9 @@
 .jump-animation {
   animation: jump .85s ease-out;
 }
+
+@keyframes jump {
+  0%{top: 212px;}
+  50%{top: 75px;}
+  100%{top: 212px;}
+}
